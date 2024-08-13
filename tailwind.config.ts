@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'working-img': "url('/assets/work-process.webp')",
+      },
       fontFamily: {
         'primary': "var(--poppins)",
         'secondary': "var(--syne)"
