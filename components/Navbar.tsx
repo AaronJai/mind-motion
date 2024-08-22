@@ -153,7 +153,11 @@ const Navbar = () => {
 
                 {/* Contact Button */}
                 <div className='hidden md:block'>
-                    <Link href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded cursor-pointer'>
+                    <Link href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded cursor-pointer' onClick={(e) => {
+                        e.preventDefault();
+                        handleCloseMenu();
+                        handleScrollTo('contact');
+                    }}>
                         Contact Us
                     </Link>
                 </div>
@@ -176,7 +180,11 @@ const Navbar = () => {
                             {navLinks.props.children}
 
                             <li className='py-2'>
-                                <Link href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded'>
+                                <Link href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded' onClick={(e) => {
+                                    e.preventDefault();
+                                    handleCloseMenu();
+                                    handleScrollTo('contact');
+                                }}>
                                     Contact Us
                                 </Link>
                             </li>
