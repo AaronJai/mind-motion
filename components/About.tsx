@@ -64,10 +64,9 @@ const About = () => {
                                     height="315" 
                                     src="https://www.youtube.com/embed/bvh2nlqpTYw?si=XvQ0iv09s6tjdwd-&autoplay=1" 
                                     title="YouTube video player" 
-                                    frameborder="0" 
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                    referrerpolicy="strict-origin-when-cross-origin" 
-                                    allowfullscreen>
+                                    referrerPolicy="strict-origin-when-cross-origin" 
+                                    allowFullScreen>
                                 </iframe>
 
                                 <button onClick={handleCloseVideo} className='absolute top-4 right-4 text-white text-2xl cursor-pointer'>
