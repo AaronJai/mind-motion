@@ -17,7 +17,7 @@ const Contact = () => {
     const [message, setMessage] = useState("");
     const [showModal, setShowModal] = useState(false);
     
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         const data = {
             name,

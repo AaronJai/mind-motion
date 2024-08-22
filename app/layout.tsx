@@ -15,7 +15,7 @@ const poppins = Poppins({ subsets: ["latin"],
 
 
 export const metadata: Metadata = {
-  title: "Mind Motion",
+  title: "MindLeap",
   description: "A TailwindCSS playground",
   icons: {
     icon: '/assets/favicon.png',
