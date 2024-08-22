@@ -5,6 +5,8 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { FaGlobe } from "react-icons/fa";
 import { useState } from "react";
+import { fadeIn } from "@/lib/AnimationVariants";
+import { motion } from "framer-motion";
 
 
 const Contact = () => {
@@ -47,8 +49,10 @@ const Contact = () => {
                 <div className='md:w-auto mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-12 gap-8 '>
                     {/* left side */}
                     <div className='space-y-8'>
-                        <h2 className='text-4xl font-bold font-secondary mb-4 text-white'>Make an Appointment</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+                        <motion.div variants={fadeIn('up', 0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}}>
+                            <h2 className='text-4xl font-bold font-secondary mb-4 text-white'>Make an Appointment</h2>
+                        </motion.div>
+                        <motion.div variants={fadeIn('left', 0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
 
                             <div className="flex items-start gap-4">
                                 <div className="flex items-center justify-center rounded-full bg-[#ffffff1a] p-3">
@@ -90,11 +94,11 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* right side */}
-                    <div className="space-y-8 p-8 bg-white shadow-xl rounded-md">
+                    <motion.div variants={fadeIn('left', 0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className="space-y-8 p-8 bg-white shadow-xl rounded-md">
                         <h3 className="text-2xl font-bold mb-4">Book Appointment</h3>
                         <form onSubmit={handleSubmit} className="space-y-8">
                             <div className="flex sm:flex-row flex-col gap-4">
@@ -109,7 +113,7 @@ const Contact = () => {
                             <textarea onChange={e => setMessage(e.target.value)} rows={5} placeholder="Write a message..." className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow"></textarea>
                             <button type="submit" className="w-full p-3 rounded-md hover:bg-primary/80 text-white bg-primary">Send Message</button>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 

@@ -1,6 +1,8 @@
 'use client';
 
 import { packages } from '@/constants'
+import { fadeIn } from '@/lib/AnimationVariants';
+import { motion } from 'framer-motion';
 import React from 'react'
 
 const Pricing = () => {
@@ -24,7 +26,7 @@ const Pricing = () => {
                 </div>
 
                 {/* packages */}
-                <div className='flex flex-col md:flex-row mx-auto gap-8 pb-12'>
+                <motion.div variants={fadeIn('left', 0.4)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col md:flex-row mx-auto gap-8 pb-12'>
                     {
                         packages.map((pkg, index) => (
                             <div key={index} className='bg-white rounded-lg p-6 flex-1 shadow-lg'>
@@ -44,7 +46,7 @@ const Pricing = () => {
                             </div>
                         ))
                     }
-                </div>
+                </motion.div>
             </div>
         </div>
     )

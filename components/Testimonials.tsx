@@ -1,4 +1,8 @@
+'use client';
+
 import { testimonials } from '@/constants'
+import { fadeIn } from '@/lib/AnimationVariants';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react'
 import { BsChatQuoteFill } from "react-icons/bs";
@@ -8,12 +12,12 @@ const Testimonials = () => {
     return (
         <div id='testimonials' className='bg-[#f7f8fc] py-12'>
             <div className='container mx-auto'>
-                <div className='text-center mb-12'>
+                <motion.div variants={fadeIn('up', 0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='text-center mb-12'>
                     <h2 className='text-4xl font-bold font-secondary mb-3'>What Our Clients Say</h2>
                     <p className='text-lg mb-12 md:w-1/2 mx-auto'>Hear from some of our satisfied customers about how our services have positively impacted their lives and well-being</p>
-                </div>
+                </motion.div>
 
-                <div className='flex flex-col md:flex-row mx-auto md:gap-12 gap-8'>
+                <motion.div variants={fadeIn('down', 0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col md:flex-row mx-auto md:gap-12 gap-8'>
                     {
                         testimonials.map((testimonial, index) => (
                             <div key={index} className='relative bg-white rounded-lg p-6 flex-1'>
@@ -40,7 +44,7 @@ const Testimonials = () => {
                             </div>
                         ))
                     }
-                </div>
+                </motion.div>
             </div>
         </div>
     )

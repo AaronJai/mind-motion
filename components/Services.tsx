@@ -3,18 +3,20 @@
 import Image from 'next/image';
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {motion} from "framer-motion";
+import { fadeIn } from '@/lib/AnimationVariants';
 
 const Services = () => {
     return (
         <div id='services' className='bg-[#f7f8fc]'>
             <div className='pt-28 px-4 container mx-auto'>
-                <div className='text-center space-y-5'>
+                <motion.div variants={fadeIn('up', 0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='text-center space-y-5'>
                     <h2 className='text-4xl font-bold font-secondary text-heroBg'>What Can We Do Together?</h2>
                     <p className='md:w-1/2 mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur fugit dignissimos, inventore accusamus culpa debitis sequi nobis non error, consectetur eveniet modi facilis dolorum animi omnis placeat quam laborum.</p>
-                </div>
+                </motion.div>
 
                 {/* Service categories */}
-                <div className='py-12 md:w-auto mx-auto'>
+                <motion.div variants={fadeIn('up', 0.3)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='py-12 md:w-auto mx-auto'>
                     <Tabs>
                         <TabList className='flex flex-auto justify-center items-center md:gap-8 gap-4'>
                             <Tab>Couple Counseling</Tab>
@@ -24,7 +26,7 @@ const Services = () => {
                         </TabList>
 
                         <TabPanel>
-                            <div className='flex flex-col md:flex-row gap-8 mt-8'>
+                            <motion.div variants={fadeIn('up', 0.1)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col md:flex-row gap-8 mt-8'>
                                 <div className='md:w-1/2 bg-white rounded-lg p-12 font-secondary'>
                                     <h3 className='text-3xl font-semibold text-primary mb-4'>Couple Counseling</h3>
                                     <p className='mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non facilis aliquid facere rerum repudiandae vero fuga molestiae, beatae tempora? Ut quam obcaecati maxime ducimus doloremque, fugiat minima laudantium accusantium?</p>
@@ -45,11 +47,11 @@ const Services = () => {
                                         className='w-full md:h-[446px] h-auto rounded-2xl object-cover'
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
                         </TabPanel>
 
                         <TabPanel>
-                            <div className='flex flex-col md:flex-row gap-8 mt-8'>
+                            <motion.div variants={fadeIn('up', 0.1)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col md:flex-row gap-8 mt-8'>
                                 <div className='md:w-1/2 bg-white rounded-lg p-12 font-secondary'>
                                     <h3 className='text-3xl font-semibold text-primary mb-4'>Parenting Skills</h3>
                                     <p className='mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non facilis aliquid facere rerum repudiandae vero fuga molestiae, beatae tempora? Ut quam obcaecati maxime ducimus doloremque, fugiat minima laudantium accusantium?</p>
@@ -70,11 +72,11 @@ const Services = () => {
                                         className='w-full md:h-[446px] h-auto rounded-2xl object-cover'
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
                         </TabPanel>
 
                         <TabPanel>
-                            <div className='flex flex-col md:flex-row gap-8 mt-8'>
+                            <motion.div variants={fadeIn('up', 0.1)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col md:flex-row gap-8 mt-8'>
                                 <div className='md:w-1/2 bg-white rounded-lg p-12 font-secondary'>
                                     <h3 className='text-3xl font-semibold text-primary mb-4'>Feeling Stuck</h3>
                                     <p className='mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non facilis aliquid facere rerum repudiandae vero fuga molestiae, beatae tempora? Ut quam obcaecati maxime ducimus doloremque, fugiat minima laudantium accusantium?</p>
@@ -95,11 +97,11 @@ const Services = () => {
                                         className='w-full md:h-[446px] h-auto rounded-2xl object-cover'
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
                         </TabPanel>
 
                         <TabPanel>
-                            <div className='flex flex-col md:flex-row gap-8 mt-8'>
+                            <motion.div variants={fadeIn('up', 0.1)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col md:flex-row gap-8 mt-8'>
                                 <div className='md:w-1/2 bg-white rounded-lg p-12 font-secondary'>
                                     <h3 className='text-3xl font-semibold text-primary mb-4'>Self-Confidence</h3>
                                     <p className='mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non facilis aliquid facere rerum repudiandae vero fuga molestiae, beatae tempora? Ut quam obcaecati maxime ducimus doloremque, fugiat minima laudantium accusantium?</p>
@@ -120,10 +122,10 @@ const Services = () => {
                                         className='w-full md:h-[446px] h-auto rounded-2xl object-cover'
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
                         </TabPanel>
                     </Tabs>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
